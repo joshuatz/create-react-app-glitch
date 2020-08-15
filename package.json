@@ -1,15 +1,16 @@
 {
-  "name": "create-react-app-slim",
+  "name": "create-react-app-glitch",
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
   "dependencies": {
+    "cross-env": "^7.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node -p \"process.env.PROJECT_REMIX_CHAIN || ''\" | grep -E \".+\" && echo \"Starting on Glitch with CI=true...\" && cross-env CI=true react-scripts start || echo \"Starting normal...\" && react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject"
   },

@@ -1,1 +1,38 @@
 /** Put Global CSS Below */
+.center {
+    text-align: center;
+}
+.spaceAfter {
+    margin-bottom: 10px;
+}
+.glitchInfo {
+    width: 86%;
+    max-width: 500px;
+    min-height: 100px;
+    margin: 0px auto 10px auto;
+    border: black double;
+    display: flex;
+}
+.glitchInfo > div {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+.glitchInfo > div:first-child {
+    border-right: solid black 1px;
+}
+.glitchInfo .sourceInfo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.glitchInfo .glitchBranding img {
+    margin: auto;
+    width: 80%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
